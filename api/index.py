@@ -9,7 +9,7 @@ CLIENT_TOKEN = os.getenv("WEBHOOK_TOKEN")
 def hello_world():
     return {"message": "Hello World"}
 
-@app.get("/api/webhook")
+@app.post("/api/webhook")
 def webhook(
     clientToken: str,
     secret: str
